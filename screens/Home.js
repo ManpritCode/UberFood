@@ -1,12 +1,13 @@
 import React  from 'react'
-import { Text, View } from 'react-native'
+import { SafeAreaView, Text, View } from 'react-native'
+import HeaderTab from '../Components/HeaderTab'
 
 export default function Home() {
   
     return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
+      <SafeAreaView style= {{marginTop:50}}>
+     < HeaderTab/>
+     </SafeAreaView>
     )
   }
 
