@@ -1,6 +1,7 @@
 import React  from 'react'
 import { SafeAreaView, Text, View } from 'react-native'
 import HeaderTab from '../Components/HeaderTab'
+import SearchBar from '../Components/SearchBar'
 
 export default function Home() {
   
@@ -15,6 +16,7 @@ export default function Home() {
       padding:15,
      }}>
      < HeaderTab/>
+     <SearchBar/>
      </View>
      </SafeAreaView>
     )
