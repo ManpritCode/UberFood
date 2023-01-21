@@ -6,8 +6,8 @@ const items =[
     text:"Pick-up",
 },
 {
-    Image :require("../assets/images/bread.png"),
-    text:"Bakery Items",
+    Image :require("../assets/images/soft-drink.png"),
+    text:"Soft Drinks",
 },
 {
     Image :require("../assets/images/fast-food.png"),
@@ -34,46 +34,16 @@ export default function Categories() {
         }}
         >
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-      <View style={{alignItems:"center",marginRight:30}}>
-        <Image source={items[0].Image}style={{
+          {items.map((item,index) => (
+      <View key={index} style={{alignItems:"center",marginRight:30}}>
+        <Image source={item.Image}style={{
             width:50,
             height:40,
             resizeMode:"contain",
         }}/>
-        <Text style={{ fontSize:13,fontWeight:"900"}}>{items[1].text}</Text>
+        <Text style={{ fontSize:13,fontWeight:"900"}}>{item.text}</Text>
       </View>
-      <View style={{alignItems:"center",marginRight:30}}>
-        <Image source={items[1].Image}style={{
-            width:50,
-            height:40,
-            resizeMode:"contain",
-        }}/>
-        <Text style={{ fontSize:13,fontWeight:"900"}}>{items[2].text}</Text>
-      </View>
-      <View style={{alignItems:"center",marginRight:30}}>
-        <Image source={items[2].Image}style={{
-            width:50,
-            height:40,
-            resizeMode:"contain",
-        }}/>
-        <Text style={{ fontSize:13,fontWeight:"900"}}>{items[3].text}</Text>
-      </View>
-      <View style={{alignItems:"center",marginRight:30}}>
-        <Image source={items[3].Image}style={{
-            width:50,
-            height:40,
-            resizeMode:"contain",
-        }}/>
-        <Text style={{ fontSize:13,fontWeight:"900"}}>{items[3].text}</Text>
-      </View>
-      <View style={{alignItems:"center",marginRight:30}}>
-        <Image source={items[4].Image}style={{
-            width:50,
-            height:40,
-            resizeMode:"contain",
-        }}/>
-        <Text style={{ fontSize:13,fontWeight:"900"}}>{items[4].text}</Text>
-      </View>
+      ))}
       </ScrollView>
       </View>
 
