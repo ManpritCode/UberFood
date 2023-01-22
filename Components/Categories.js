@@ -28,7 +28,7 @@ export default function Categories() {
     return (
         <View style={{
             marginTop:5,
-            backgroundColor:"greenyellow",
+            backgroundColor:"green",
             paddingVertical:10,
             paddingLeft:20,
         }}
