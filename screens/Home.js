@@ -5,8 +5,7 @@ import HeaderTab from '../Components/HeaderTab'
 import RestaurantItem from '../Components/RestaurantItem'
 import SearchBar from '../Components/SearchBar'
 
-
-
+const YELP_API_KEY = "bdRJutLhFAQJ36t7b89CWjHFBU$OKzjt9wvZzcY-nkgmvTqlNMjZWV1eG7iBQ9R74SyfxRg9LWnBAkZY06BtAZAe4dfX-2vuX8a1l5V7foctHfX9UKEoM5ts#YXYx"
 export default function Home() {
   
     return (
@@ -19,7 +18,7 @@ export default function Home() {
       backgroundColor:"green",
       padding:15,
      }}>
-     < HeaderTab/>
+     <HeaderTab/>
      <SearchBar/>
      </View>
      <ScrollView showsVerticalScrollIndicator={false}>
