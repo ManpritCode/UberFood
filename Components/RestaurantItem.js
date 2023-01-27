@@ -29,7 +29,7 @@ export const localRestaurants = [
     },
   ];
 
-export default function RestaurantItem() {
+export default function RestaurantItem(props) {
   
     return (
         <TouchableOpacity activeOpacity={0.5} style={{marginBottom:30}}>
@@ -86,3 +86,15 @@ export default function RestaurantItem() {
         </View>
         </View>
     )
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'c4d6ecd32fmsh634df58143ad93cp101566jsn72fccac91df0',
+            'X-RapidAPI-Host': 'referential.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://referential.p.rapidapi.com/v1/state/US-MN', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
