@@ -10,7 +10,7 @@ export default function SearchBar() {
     flexDirection:"row",
    }}>
     <GooglePlacesAutocomplete 
-    query={{key:"AIzaSyB5G3hBsC-Jli_FZTGZzYcFsKnIAsukq7Q"}}
+       
     placeholder='Search'
     styles={{
       textInput:{
