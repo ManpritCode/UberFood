@@ -28,14 +28,15 @@ export default function Categories() {
     return (
         <View style={{
             marginTop:5,
-            backgroundColor:"green",
+            backgroundColor:"yellowgreen",
             paddingVertical:10,
             paddingLeft:20,
         }}
         >
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {items.map((item,index) => (
-      <View key={index} style={{alignItems:"center",marginRight:30}}>
+      <View key={index} style={{alignItems:"center",marginRight:30,
+    }}>
         <Image source={item.Image}style={{
             width:50,
             height:40,

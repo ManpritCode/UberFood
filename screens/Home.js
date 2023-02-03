@@ -1,5 +1,6 @@
 import React  from 'react'
 import { SafeAreaView, ScrollView, Text, View } from 'react-native'
+import BottomTab from '../Components/BottomTab'
 import Categories from '../Components/Categories'
 import HeaderTab from '../Components/HeaderTab'
 import RestaurantItem from '../Components/RestaurantItem'
@@ -12,7 +13,7 @@ export default function Home() {
     return (
       <SafeAreaView style= {{
         marginTop:49,
-        backgroundColor:"grey",
+        backgroundColor:"white",
         flex:1,
         }}>
      <View style={{
@@ -27,6 +28,7 @@ export default function Home() {
      <RestaurantItem />
      
      </ScrollView>
+     <BottomTab />
      </SafeAreaView>
     );
   }

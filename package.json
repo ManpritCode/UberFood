@@ -10,11 +10,16 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/react-native-fontawesome": "^0.3.0",
     "expo": "~47.0.12",
     "expo-status-bar": "~1.4.2",
+    "font-awesome5": "^1.0.5",
     "react": "18.1.0",
     "react-native": "0.70.5",
-    "react-native-google-places-autocomplete": "^2.5.1"
+    "react-native-elements": "^3.4.3",
+    "react-native-google-places-autocomplete": "^2.5.1",
+    "react-native-svg": "^13.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

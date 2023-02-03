@@ -36,7 +36,17 @@ export default function RestaurantItem(props) {
             {localRestaurants.map((restaurant,index) => ( 
         <View 
         key={index}
-        style={{marginTop:10,padding:15,backgroundColor:"green"}}
+        style={{marginTop:10,padding:15,backgroundColor:"pink",width:380,borderRadius:25,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 8,
+        },
+        shadowOpacity: 0.2,
+        shadowRadius: 10.32,
+        
+        elevation: 30,
+    }}
                 >
             <RestuarantImage Image={restaurant.image_url}/>
             <RestaurantInfo  
@@ -55,7 +65,7 @@ export default function RestaurantItem(props) {
         }}
         style={{width:"100%",height:180}}
         />
-        <TouchableOpacity style={{position:"absolute",right:30,top:20}}>
+        <TouchableOpacity style={{position:"absolute",right:30,top:50}}>
         <Entypo name="heart-outlined" size={40} color="white" />
         </TouchableOpacity>
         </>
@@ -86,15 +96,4 @@ export default function RestaurantItem(props) {
         </View>
         </View>
     )
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'c4d6ecd32fmsh634df58143ad93cp101566jsn72fccac91df0',
-            'X-RapidAPI-Host': 'referential.p.rapidapi.com'
-        }
-    };
-    
-    fetch('https://referential.p.rapidapi.com/v1/state/US-MN', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+   
