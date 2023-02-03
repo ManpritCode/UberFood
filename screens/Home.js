@@ -22,9 +22,11 @@ export default function Home() {
      }}>
      <HeaderTab/>
      <SearchBar/>
+    
      </View>
-     <ScrollView showsVerticalScrollIndicator={false}>
      <Categories />
+     <ScrollView showsVerticalScrollIndicator={false}>
+     
      <RestaurantItem />
      
      </ScrollView>

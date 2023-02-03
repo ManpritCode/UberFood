@@ -32,14 +32,14 @@ export const localRestaurants = [
 export default function RestaurantItem(props) {
   
     return (
-        <TouchableOpacity activeOpacity={0.5} style={{marginBottom:30}}>
+        <TouchableOpacity activeOpacity={0.5} style={{marginBottom:10,alignItems:"center"}}>
             {localRestaurants.map((restaurant,index) => ( 
         <View 
         key={index}
-        style={{marginTop:10,padding:15,backgroundColor:"pink",width:380,borderRadius:25,
+        style={{marginTop:10,padding:15,backgroundColor:"pink",width:380,borderRadius:10,
         shadowColor: "#000",
         shadowOffset: {
-            width: 0,
+            width: 10,
             height: 8,
         },
         shadowOpacity: 0.2,
@@ -63,9 +63,10 @@ export default function RestaurantItem(props) {
         <Image source={{
             uri: props.Image,
         }}
-        style={{width:"100%",height:180}}
+        style={{width:"100%",height:180,borderRadius:10,borderColor: '#FF3D00',
+        borderWidth: 3,}}
         />
-        <TouchableOpacity style={{position:"absolute",right:30,top:50}}>
+        <TouchableOpacity style={{position:"absolute",right:30,top:50,}}>
         <Entypo name="heart-outlined" size={40} color="white" />
         </TouchableOpacity>
         </>
@@ -74,7 +75,7 @@ export default function RestaurantItem(props) {
     const RestaurantInfo = (props) =>(
         <View style={{
             flexDirection:"row",
-            justifyContent:"space-between",
+            
             alignItems:"center",
             marginTop:10,}}>
         <View>
