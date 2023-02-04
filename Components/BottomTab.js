@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, StyleSheet, View  ,Icon} from 'react-native'
+import { Text, StyleSheet, View  ,Icon, TouchableOpacity} from 'react-native'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
@@ -17,7 +17,7 @@ export default function BottomTabs() {
         backgroundColor:"orange",
         flex:0,
        }} 
-       >
+       ><TouchableOpacity>
         <View style={{
             flexDirection:"column",
 
@@ -25,12 +25,16 @@ export default function BottomTabs() {
        <Ionicons name="home" size={30} color="black" />
       <Text style={{ fontWeight:"500"}}>home</Text>
       </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
       <View style={{
             flexDirection:"column"
         }}>
        <Ionicons name="search" size={32} color="black" />
       <Text style={{ fontWeight:"500"}}>Search</Text>
       </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
       <View style={{
             flexDirection:"column"
         }}>
@@ -41,6 +45,8 @@ export default function BottomTabs() {
       
     }}>Grocery</Text>
       </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
       <View style={{
             flexDirection:"column",
             
@@ -52,6 +58,8 @@ export default function BottomTabs() {
        fontWeight:"500",
     }}>Orders</Text>
       </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
       <View style={{
             flexDirection:"column"
         }}>
@@ -63,6 +71,7 @@ export default function BottomTabs() {
     }}
       >Account</Text>
       </View>
+      </TouchableOpacity>
        </View>
 
     )
