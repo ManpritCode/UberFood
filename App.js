@@ -1,11 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './screens/Home';
-import ReastaurantDetail from './screens/ReastourantDetail';
+
+import  React from "react";
+import RootNavigation from './navigation';
+
 
 export default function App() {
-  return (
-   <ReastaurantDetail />
-  );
+  return  <RootNavigation />;
 }
 

@@ -8,7 +8,7 @@ import SearchBar from '../Components/SearchBar'
 
 const YELP_API_KEY = ""
 
-export default function Home() {
+export default function Home({navigation}) {
   
     return (
       <SafeAreaView style= {{
@@ -27,7 +27,11 @@ export default function Home() {
      <Categories />
      <ScrollView showsVerticalScrollIndicator={false}>
      
-     <RestaurantItem />
+     <RestaurantItem 
+     
+     navigation = {navigation}
+     
+     />
      
      </ScrollView>
      <BottomTab />

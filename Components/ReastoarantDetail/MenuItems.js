@@ -1,6 +1,7 @@
 import React from "react";
 import { ScrollView, StyleSheet } from "react-native";
 import { View,Text,Image } from "react-native";
+import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { Divider } from "react-native-elements";
 
 const foods = [
@@ -69,6 +70,9 @@ const foods = [
         <View>
         <View key={index}
         style={styles.MeniItemStyle}>
+            <BouncyCheckbox
+            iconStyle={{borderColor:"orange",borderRadius:0,}} 
+            fillColor="green"/>
            <FoodInfo food={food} /> 
            <FoodImage food = {food} />
         </View>

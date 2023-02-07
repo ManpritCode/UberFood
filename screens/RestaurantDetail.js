@@ -3,14 +3,14 @@ import{View,Text} from "react-native";
 import { Divider } from "react-native-elements";
 import About from "../Components/ReastoarantDetail/About";
 import MenuItems from "../Components/ReastoarantDetail/MenuItems";
-import MeniItem from "../Components/ReastoarantDetail/MenuItems";
+ 
 
-export default function ReastaurantDetail(){
+export default function ReastaurantDetail({route}){
     return(
         <View>
-            <About />
+            <About route={route} />
             <Divider width={1.8} style={{marginVertical:20}}/>
-            <MenuItems / >
+            <MenuItems />
         </View>
     )
 }
