@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet } from "react-native";
 import { View,Text,Image } from "react-native";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { Divider } from "react-native-elements";
+import {useDispatch} from "react-native-redux";
 
 const foods = [
   {  title : "Lasagna",
@@ -64,6 +65,13 @@ const foods = [
  })
 
  export default function MenuItems() {
+        const dispatch = useDispatch ();
+        const selectedItem = (item) =>
+        dispatch({
+            type:"ADD_TO_CART",
+            payload:item,
+        })
+
     return(
         < ScrollView>
         {foods.map((food,index) => (

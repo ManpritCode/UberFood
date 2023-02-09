@@ -33,14 +33,16 @@ export default function RestaurantItem({ navigation, ...props}) {
   
     return (
         <>
-        
-        <TouchableOpacity activeOpacity={0.5} style={{marginBottom:10,alignItems:"center"}} 
+         {localRestaurants.map((restaurant,index) => ( 
+        <TouchableOpacity
+         key={index} 
+         activeOpacity={0.5}
+        style={{marginBottom:10,alignItems:"center"}} 
         
         onPress = { () => navigation.navigate("RestaurantDetail")}
           >
-            {localRestaurants.map((restaurant,index) => ( 
+           
         <View  
-        key={index}
         style={{marginTop:10,padding:15,backgroundColor:"pink",width:380,borderRadius:10,
         shadowColor: "#000",
         shadowOffset: {
@@ -59,8 +61,9 @@ export default function RestaurantItem({ navigation, ...props}) {
             rating={restaurant.rating}
             />
         </View>
-        ))}
+       
         </TouchableOpacity>
+         ))}
         </>
     );
   
